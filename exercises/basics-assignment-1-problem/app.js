@@ -12,6 +12,10 @@ const app = Vue.createApp({
         //RANDOM NUMBER BETWEEN 0 AND 1
         randomNumber() {
             return Math.random().toFixed(2);
+        },
+        //Calculate age + 5
+        agePlusFive() {
+            return this.person.age + 5;
         }
     }
 });
