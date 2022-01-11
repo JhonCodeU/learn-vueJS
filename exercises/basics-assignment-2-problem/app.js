@@ -9,7 +9,7 @@ const app = Vue.createApp({
     },
     methods: {
         showAlert() {
-            alert(`Alerta!!`);
+            alert(`This work!!!`);
         },
         setNameUser(event) {
             this.user.name = event.target.value;
