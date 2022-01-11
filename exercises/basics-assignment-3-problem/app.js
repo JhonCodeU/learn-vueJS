@@ -1,22 +1,32 @@
 const app = Vue.createApp({
     data() {
         return {
-            counter: 0,
-            comment: '',
+            number: 0,
         };
     },
     watch: {
-        counter(value) { 
-            if (value > 37) {
-                setTimeout(this.counter = 0, 5000)
-                this.comment = 'Too much!';
+        result() {
+            console.log('Watcher executing...');
+            const that = this;
+            setTimeout(() => {
+                that.number = 0;
+            }, 5000);
+        }
+    },
+    computed: {
+        result() {
+            if (this.number < 37) {
+                return 'Not there yet!';
+            }else if(this.number === 37) {
+                return 'You found it!';
+            } else {
+                return 'Too much!';
             }
-            this.comment = 'Not there yet!';
         }
     },
     methods: {
         add(num) {
-            this.counter = this.counter + num;
+            this.number = this.number + num;
         }
     }
 })
