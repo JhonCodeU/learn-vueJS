@@ -17,6 +17,7 @@
         {{ email }}
       </li>
     </ul>
+    <button @click="deleteFriend">Delete</button>
   </li>
 </template>
 
@@ -49,6 +50,22 @@ export default {
       },
     },
   },
+  emits: {
+    "toggle-favorite": (id) => {
+      if (id) {
+        return true;
+      } else {
+        console.warn("toggle-favorite event emitted without id");
+      }
+    },
+    "delete-friend": (id) => {
+      if (id) {
+        return true;
+      } else {
+        console.warn("delete-friend event emitted without id");
+      }
+    },
+  },
   data() {
     return {
       detailsAreVisible: false,
@@ -61,6 +78,9 @@ export default {
     },
     toggleFavorite() {
       this.$emit("toggle-favorite", this.id);
+    },
+    deleteFriend() {
+      this.$emit("delete-friend", this.id);
     },
   },
 };
