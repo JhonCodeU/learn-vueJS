@@ -46,7 +46,11 @@
 
 <script>
 export default {
-  inject: ['addResource'],
+  inject: {
+    addResource: {
+      default: null,
+    },
+  },
   data() {
     return {
       inputIsInvalid: false,
