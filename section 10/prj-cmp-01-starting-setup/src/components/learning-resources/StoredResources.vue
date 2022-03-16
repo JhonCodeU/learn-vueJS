@@ -8,6 +8,7 @@
       :description="res.description"
       :link="res.link"
     ></learning-resource>
+    Store Resources
   </ul>
 </template>
 

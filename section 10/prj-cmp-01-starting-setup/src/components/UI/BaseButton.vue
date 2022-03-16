@@ -1,5 +1,5 @@
 <template>
-  <button :type="type">
+  <button :type="type" :class="mode">
     <slot></slot>
   </button>
 </template>
@@ -7,10 +7,6 @@
 <script>
 export default {
   props: {
-    type: {
-      type: String,
-      default: 'button',
-    },
     mode: {
       type: String,
       required: true,

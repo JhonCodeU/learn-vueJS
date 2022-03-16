@@ -7,7 +7,7 @@
 
 <script>
 import TheHeader from './components/layouts/TheHeader.vue';
-import TheResources from './components/learning-resources/StoredResources.vue';
+import TheResources from './components/learning-resources/TheResource.vue';
 
 export default {
   name: 'App',
